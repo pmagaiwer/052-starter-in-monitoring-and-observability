@@ -12,6 +12,22 @@ vagrant up
 
 Este comando irá provisionar duas máquinas virtuais com todas as ferramentas necessárias para o curso.
 
+
+Parar uma máquina específica: Se você tem múltiplas máquinas definidas (ex: "web" e "db"), você pode parar apenas uma:
+
+```bash
+vagrant halt web
+```
+
+(Substitua web pelo nome da sua máquina).
+
+```
+⚠️ Comandos Relacionados (Cuidado para não confundir!)
+- vagrant suspend: Pausa a máquina. Ele salva o estado atual da RAM em disco e "congela" a VM. É mais rápido para retomar (com vagrant resume), mas consome espaço em disco para salvar o estado.
+
+- vagrant destroy: Destrói a máquina. Isso remove completamente a VM e seus discos virtuais. Todos os dados dentro da VM (que não estejam em pastas compartilhadas) serão perdidos.
+```
+
 ## O que está habilitado no laboratório
 
 ### Servidor Zabbix (server-zbx - 172.16.1.110)
